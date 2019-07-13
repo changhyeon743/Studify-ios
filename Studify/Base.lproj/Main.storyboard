@@ -1,24 +1,169 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="rZf-M4-J5n">
+    <device id="retina5_9" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
-        <scene sceneID="tne-QT-ifu">
+        <!--Main-->
+        <scene sceneID="sGs-6h-NPa">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                <viewController id="ZBC-Pu-EA9" userLabel="Main" customClass="MainVC" customModule="Studify" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="zhm-fq-yFT">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bbq-3N-fI6">
+                                <rect key="frame" x="148.66666666666666" y="339" width="78" height="38"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                <state key="normal" title="공부 선택"/>
+                                <connections>
+                                    <action selector="currentBtnPressed:" destination="ZBC-Pu-EA9" eventType="touchUpInside" id="yNl-Sk-tiG"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="휴대폰을 뒤집어 공부를 시작하세요." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cYM-Vw-j3K">
+                                <rect key="frame" x="68.333333333333329" y="395.66666666666669" width="238.66666666666669" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="bbq-3N-fI6" firstAttribute="centerY" secondItem="zhm-fq-yFT" secondAttribute="centerY" constant="-48" id="B3T-m0-jP3"/>
+                            <constraint firstItem="cYM-Vw-j3K" firstAttribute="centerY" secondItem="zhm-fq-yFT" secondAttribute="centerY" id="aus-Vd-RBj"/>
+                            <constraint firstItem="bbq-3N-fI6" firstAttribute="centerX" secondItem="zhm-fq-yFT" secondAttribute="centerX" id="beF-xw-4aA"/>
+                            <constraint firstItem="cYM-Vw-j3K" firstAttribute="centerX" secondItem="zhm-fq-yFT" secondAttribute="centerX" id="qrz-bf-uVb"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="JtB-ye-Qge"/>
                     </view>
+                    <tabBarItem key="tabBarItem" title="집중" image="timer" id="u4s-lk-jAQ"/>
+                    <navigationItem key="navigationItem" title="집중" id="HVJ-PO-jG2"/>
+                    <connections>
+                        <outlet property="currentBtn" destination="bbq-3N-fI6" id="LZ9-sO-Ifl"/>
+                    </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nAd-GW-vgh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="1030" y="-569"/>
+        </scene>
+        <!--친구들-->
+        <scene sceneID="s9x-y6-QkU">
+            <objects>
+                <viewController id="90X-Vz-DBo" userLabel="친구들" customClass="FriendRankingVC" customModule="Studify" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Ia3-sU-Iiq">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="b8J-tJ-BCx">
+                                <rect key="frame" x="0.0" y="140" width="375" height="589"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="90X-Vz-DBo" id="1yE-dE-EOk"/>
+                                    <outlet property="delegate" destination="90X-Vz-DBo" id="Xc1-VZ-g5W"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="b8J-tJ-BCx" firstAttribute="top" secondItem="jnu-sr-6IH" secondAttribute="top" id="2rO-s3-6NE"/>
+                            <constraint firstItem="jnu-sr-6IH" firstAttribute="trailing" secondItem="b8J-tJ-BCx" secondAttribute="trailing" id="Aa0-1K-dtx"/>
+                            <constraint firstItem="b8J-tJ-BCx" firstAttribute="leading" secondItem="Ia3-sU-Iiq" secondAttribute="leading" id="hcL-ug-me4"/>
+                            <constraint firstItem="jnu-sr-6IH" firstAttribute="bottom" secondItem="b8J-tJ-BCx" secondAttribute="bottom" id="xTK-cx-03f"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="jnu-sr-6IH"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="친구들" image="write" id="fHr-dF-W3a"/>
+                    <navigationItem key="navigationItem" title="Ranking" id="kPE-xg-pwZ"/>
+                    <connections>
+                        <outlet property="tableView" destination="b8J-tJ-BCx" id="oAF-LA-9dg"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NUV-ld-I53" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1359" y="156"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="mYy-32-i24">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="8Fd-df-JlU" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="EdY-4k-duo"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="jxy-lN-xDe">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="ZBC-Pu-EA9" kind="relationship" relationship="viewControllers" id="9b4-xV-ykg"/>
+                        <segue destination="90X-Vz-DBo" kind="relationship" relationship="viewControllers" id="Rw0-Cf-uAL"/>
+                        <segue destination="Kmo-3P-2jw" kind="relationship" relationship="viewControllers" id="7Wv-Vh-IsO"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jbg-qY-W1c" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="138.40000000000001" y="76.911544227886068"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="VtO-vZ-JUM">
+            <objects>
+                <navigationController id="rZf-M4-J5n" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="1RE-RM-t79">
+                        <rect key="frame" x="0.0" y="44" width="375" height="96"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="8Fd-df-JlU" kind="relationship" relationship="rootViewController" id="ard-Wn-do6"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tpW-sP-QRB" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-850" y="77"/>
+        </scene>
+        <!--전체 랭킹-->
+        <scene sceneID="1fc-nL-nvH">
+            <objects>
+                <viewController id="Kmo-3P-2jw" customClass="WideRankingVC" customModule="Studify" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Tbc-8L-nEM">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="JGZ-gd-G2Z">
+                                <rect key="frame" x="0.0" y="140" width="375" height="589"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="Kmo-3P-2jw" id="jDn-WP-b7p"/>
+                                    <outlet property="delegate" destination="Kmo-3P-2jw" id="aVy-T5-JEn"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="JGZ-gd-G2Z" firstAttribute="top" secondItem="FJQ-Ob-gSl" secondAttribute="top" id="ALd-X8-Wca"/>
+                            <constraint firstItem="JGZ-gd-G2Z" firstAttribute="bottom" secondItem="FJQ-Ob-gSl" secondAttribute="bottom" id="APh-1E-lxS"/>
+                            <constraint firstItem="JGZ-gd-G2Z" firstAttribute="trailing" secondItem="FJQ-Ob-gSl" secondAttribute="trailing" id="Auu-Tp-7g6"/>
+                            <constraint firstItem="JGZ-gd-G2Z" firstAttribute="leading" secondItem="FJQ-Ob-gSl" secondAttribute="leading" id="Z5l-Sz-kDh"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="FJQ-Ob-gSl"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="전체 랭킹" image="ranking" id="thf-Ln-CPw"/>
+                    <connections>
+                        <outlet property="tableView" destination="JGZ-gd-G2Z" id="x2O-dh-vzi"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mJ0-KC-jay" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="734" y="891"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="ranking" width="24" height="18"/>
+        <image name="timer" width="24" height="28"/>
+        <image name="write" width="24" height="24"/>
+    </resources>
 </document>

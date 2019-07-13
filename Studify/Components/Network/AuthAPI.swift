@@ -20,13 +20,9 @@ class AuthAPI {
             "facebookId" : facebookId,
             "profileURL" : profileURL,
         ]
-        
-    Alamofire.request(
-        "\(API.baseURL)/user/register",
-        method:.post,
-        parameters:parameters,
-        encoding:URLEncoding.httpBody,
-        headers:headers)
+            
+    
+    Alamofire.request( "\(API.shared.baseURL)/user/register", method:.post, parameters:parameters, encoding:URLEncoding.httpBody, headers:headers )
         .responseJSON(completionHandler: { (response) in
             //1. JSON 변환
             //print("result: ", response.debugDescription)

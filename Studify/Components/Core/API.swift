@@ -7,14 +7,32 @@
 //
 
 import Foundation
+import Rasat
+
 
 class API {
-    static var baseURL = "http://13.125.252.104:3030"
+    static let shared = API()
     
-    static var auth = AuthAPI()
-    static var ranking = RankingAPI()
-    static var study = StudyAPI()
-    static var facebook = FacebookAPI()
+    let baseURL = "http://13.125.252.104:3030"
     
-    static var currentUser:User? = nil
+    var auth = AuthAPI()
+    var ranking = RankingAPI()
+    var study = StudyAPI()
+    var facebook = FacebookAPI()
+    
+    //static var date = DateAPI()
+    
+    
+    var currentUser:User? = nil
+    var currentFriends:[User] = []
+    var currentFriendsIds: [String] {
+        get {
+            return currentFriends.map{$0.facebookId}
+        }
+    }
+    
+    //static var blackCoverView: BlackCover = BlackCover()
+    let channel = Channel<Studying>()
+
+    
 }

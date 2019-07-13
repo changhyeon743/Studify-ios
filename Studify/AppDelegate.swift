@@ -19,14 +19,36 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         FBSDKCoreKit.ApplicationDelegate.shared.application(application, didFinishLaunchingWithOptions: launchOptions)
         //        SDKApplicationDelegate.shared.application(application, didFinishLaunchingWithOptions: launchOptions)
         
-        //if let loggedInUsingFBTokenCheck = AccessToken.current{
+        if let loggedInUsingFBTokenCheck = AccessToken.current{
             //User is already logged-in. Please do your additional code/task.
-        //    print(loggedInUsingFBTokenCheck)
+            print(loggedInUsingFBTokenCheck)
+            API.shared.facebook.getUser(completion: { (json) in
+                let name = json["name"].stringValue
+                let facebookID = json["id"].stringValue
+                let profile = json["picture"]["data"]["url"].stringValue
+                API.shared.auth.register(name: name, facebookId: facebookID, profileURL: profile) { (json,err)  in
+                    if (err == nil) {
+                        print("currentUser json: ",json.debugDescription)
+                        API.shared.currentUser = User.transform(fromJSON: json["userModel"])
+                        print("currentUser: ",API.shared.currentUser.debugDescription)
+                    }
+                }
+            })
+            API.shared.facebook.getFriends(completion: { (json) in
+                print("friends..")
+                
+                API.shared.currentFriends = User.transform(fromFB: json)
+                print(API.shared.currentFriends)
+                
+            })
+            if let window = self.window{
+                window.rootViewController = UIStoryboard(name: "Main", bundle: nil).instantiateInitialViewController() as! UINavigationController
+            }
             
-        //    setRootVC(to: UIStoryboard(name: "Main", bundle: nil).instantiateInitialViewController() as! UITabBarController)
-        //}else{
+        }else{
             //User is not logged-in. Allow the user for login using FB.
-        //}
+            
+        }
         
         return true
     }

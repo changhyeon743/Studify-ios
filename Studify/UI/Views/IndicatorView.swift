@@ -22,7 +22,8 @@ class IndicatorView: UIView {
     }
     init(uiView: UIView) {
         super.init(frame: CGRect.zero)
-        
+        self.layer.zPosition = -1
+
         container.frame = uiView.frame
         container.center = uiView.center
         container.backgroundColor = UIColor(r: 255, g: 255, b: 255, alpha: 0.3)

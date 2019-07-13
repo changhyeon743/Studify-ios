@@ -1,0 +1,6 @@
+framework module Rasat {
+  umbrella header "Rasat-umbrella.h"
+
+  export *
+  module * { export * }
+}

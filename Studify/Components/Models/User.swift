@@ -20,6 +20,7 @@ struct User: Codable {
     var average_time: Double
     var max_time: Double
     var token: String
+    var times: Int
 }
 
 extension User {
@@ -33,7 +34,43 @@ extension User {
                         end_time: json["end_time"].doubleValue,
                         average_time: json["average_time"].doubleValue,
                         max_time: json["max_time"].doubleValue,
-                        token: json["token"].stringValue)
+                        token: json["token"].stringValue,
+                        times: json["times"].intValue
+                        )
+        
+        //print(user)
+        return user
+    }
+    
+    static func transform(fromFB temp:JSON) -> [User] {
+        let json = temp.arrayValue
+        let user = json.map{User(name: $0["name"].stringValue,
+                                 facebookId: $0["id"].stringValue,
+                                 profileURL: $0["picture"]["data"]["url"].stringValue,
+                                 current: "",
+                                 start_time: -1,
+                                 end_time: -1,
+                                 average_time: 0,
+                                 max_time: 0,
+                                 token: "",
+                                 times: 0)}
+        
+        //print(user)
+        return user
+    }
+    
+    static func transform(fromRanks temp:JSON) -> [User] {
+        let json = temp.arrayValue
+        let user = json.map{User(name: $0["name"].stringValue,
+                                 facebookId: $0["facebookId"].stringValue,
+                                 profileURL: $0["profileURL"].stringValue,
+                                 current: $0["current"].stringValue,
+                                 start_time: $0["start_time"].doubleValue,
+                                 end_time: $0["end_time"].doubleValue,
+                                 average_time: $0["average_time"].doubleValue,
+                                 max_time: $0["max_time"].doubleValue,
+                                 token: $0["token"].stringValue,
+                                 times: $0["times"].intValue)}
         
         //print(user)
         return user

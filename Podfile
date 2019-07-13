@@ -13,4 +13,7 @@ pod 'FacebookCore'
 pod 'FBSDKLoginKit'
 pod 'ActionSheetPicker-3.0', '~> 2.3.0'
 pod 'Bolts'
+pod 'Rasat'
+pod 'Charts'
+
 end
