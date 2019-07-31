@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "0930"
+   LastUpgradeVersion = "1100"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -14,10 +14,10 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "C68B5D7E2C97BF43965460DAF534A5BF"
+               BlueprintIdentifier = "9BA5348AA00F386D4EDE906C9E14F98B"
+               BuildableName = "FacebookCore.framework"
                BlueprintName = "FacebookCore"
-               ReferencedContainer = "container:Pods.xcodeproj"
-               BuildableName = "FacebookCore.framework">
+               ReferencedContainer = "container:Pods.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>

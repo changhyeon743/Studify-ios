@@ -70,7 +70,7 @@ class ChartView: UIView {
         
         //loadingView.addSubview(actInd)
         //loadingView.insertSubview(label, aboveSubview: actInd)
-        alertView.addSubview(chartView)
+        //alertView.addSubview(chartView)
         container.addSubview(close)
         container.addSubview(alertView)
         uiView.addSubview(container)
@@ -96,6 +96,26 @@ class ChartView: UIView {
         chartView.isHidden = true
         close.isHidden = true
         alertView.isHidden = true
+    }
+    
+    func show(viewController: UIViewController,title: String) {
+        chartView.isHidden = false
+        let alertController = UIAlertController(title: title, message: nil, preferredStyle: .actionSheet)
+        alertController.view.addSubview(chartView)
+        chartView.translatesAutoresizingMaskIntoConstraints = false
+        
+        chartView.topAnchor.constraint(equalTo: alertController.view.topAnchor, constant: 45).isActive = true
+        chartView.rightAnchor.constraint(equalTo: alertController.view.rightAnchor, constant: -10).isActive = true
+        chartView.leftAnchor.constraint(equalTo: alertController.view.leftAnchor, constant: 10).isActive = true
+        chartView.heightAnchor.constraint(equalToConstant: 250).isActive = true
+        
+        alertController.view.translatesAutoresizingMaskIntoConstraints = false
+        alertController.view.heightAnchor.constraint(equalToConstant: 390).isActive = true
+        
+        
+        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+        alertController.addAction(cancelAction)
+        viewController.present(alertController, animated: true, completion: nil)
     }
     
     func setData(xVals: [String], dataPoints: [Double]) {

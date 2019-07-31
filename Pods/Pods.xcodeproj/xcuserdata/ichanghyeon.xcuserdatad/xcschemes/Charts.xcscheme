@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "0930"
+   LastUpgradeVersion = "1100"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -14,10 +14,10 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "DF6D5DB0A4A0B571DE6C03CBED1FB972"
+               BlueprintIdentifier = "30A34EE6D9248C8E7D7D76BDEE539E27"
+               BuildableName = "Charts.framework"
                BlueprintName = "Charts"
-               ReferencedContainer = "container:Pods.xcodeproj"
-               BuildableName = "Charts.framework">
+               ReferencedContainer = "container:Pods.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>

@@ -22,11 +22,7 @@ class StudyAPI {
             //print(API.isStudying)
             if (isStudying != oldValue) {
                 guard let user = API.shared.currentUser else { print("non logined"); return}
-                //print(API.isStudying)
-                
-                
                 if (isStudying) { //시작했을 경우
-                    
                     API.shared.study.start(token: user.token, current: user.current) { (json, err) in
                         //공부를 얼마만에 시작했는지
                         API.shared.channel.broadcast(.start)

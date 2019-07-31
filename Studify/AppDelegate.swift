@@ -19,6 +19,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         FBSDKCoreKit.ApplicationDelegate.shared.application(application, didFinishLaunchingWithOptions: launchOptions)
         //        SDKApplicationDelegate.shared.application(application, didFinishLaunchingWithOptions: launchOptions)
         
+        UITabBar.appearance().tintColor = UIColor.mainColor
+        
         if let loggedInUsingFBTokenCheck = AccessToken.current{
             //User is already logged-in. Please do your additional code/task.
             print(loggedInUsingFBTokenCheck)

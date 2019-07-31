@@ -26,7 +26,7 @@
                                     <action selector="currentBtnPressed:" destination="ZBC-Pu-EA9" eventType="touchUpInside" id="yNl-Sk-tiG"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="휴대폰을 뒤집어 공부를 시작하세요." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cYM-Vw-j3K">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="휴대폰을 뒤집어 집중을 시작하세요." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cYM-Vw-j3K">
                                 <rect key="frame" x="68.333333333333329" y="395.66666666666669" width="238.66666666666669" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
@@ -50,7 +50,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nAd-GW-vgh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1030" y="-569"/>
+            <point key="canvasLocation" x="1070" y="-532"/>
         </scene>
         <!--친구들-->
         <scene sceneID="s9x-y6-QkU">
@@ -162,8 +162,9 @@
         </scene>
     </scenes>
     <resources>
-        <image name="ranking" width="24" height="18"/>
-        <image name="timer" width="24" height="28"/>
-        <image name="write" width="24" height="24"/>
+        <image name="ranking" width="20" height="15"/>
+        <image name="timer" width="20" height="23"/>
+        <image name="write" width="20" height="20"/>
     </resources>
+    <color key="tintColor" red="0.92156862745098034" green="0.70588235294117641" blue="0.17254901960784313" alpha="1" colorSpace="calibratedRGB"/>
 </document>

@@ -17,10 +17,11 @@
 		7829140322CF382D005A49C6 /* AuthAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 782913FB22CF382D005A49C6 /* AuthAPI.swift */; };
 		7829140422CF382D005A49C6 /* RankingAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 782913FC22CF382D005A49C6 /* RankingAPI.swift */; };
 		7829140522CF382D005A49C6 /* StudyAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 782913FD22CF382D005A49C6 /* StudyAPI.swift */; };
-		7829140622CF382D005A49C6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7829140022CF382D005A49C6 /* ViewController.swift */; };
+		7829140622CF382D005A49C6 /* WelcomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7829140022CF382D005A49C6 /* WelcomeVC.swift */; };
 		7829140822CF3C35005A49C6 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7829140722CF3C35005A49C6 /* User.swift */; };
 		7829140A22CF43F8005A49C6 /* IndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7829140922CF43F8005A49C6 /* IndicatorView.swift */; };
 		7829140E22CF445E005A49C6 /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7829140D22CF445E005A49C6 /* UIColor.swift */; };
+		782C69DC22F158CC0061709A /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 782C69DB22F158CC0061709A /* MainViewModel.swift */; };
 		789BBF4022D981F700202D64 /* Study.swift in Sources */ = {isa = PBXBuildFile; fileRef = 789BBF3F22D981F700202D64 /* Study.swift */; };
 		789BBF4222D984E900202D64 /* ChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 789BBF4122D984E900202D64 /* ChartView.swift */; };
 		78A6E44A22D4B5F400B5F08A /* RankingCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 78A6E44922D4B5F400B5F08A /* RankingCell.xib */; };
@@ -48,10 +49,11 @@
 		782913FB22CF382D005A49C6 /* AuthAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthAPI.swift; sourceTree = "<group>"; };
 		782913FC22CF382D005A49C6 /* RankingAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RankingAPI.swift; sourceTree = "<group>"; };
 		782913FD22CF382D005A49C6 /* StudyAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StudyAPI.swift; sourceTree = "<group>"; };
-		7829140022CF382D005A49C6 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		7829140022CF382D005A49C6 /* WelcomeVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WelcomeVC.swift; sourceTree = "<group>"; };
 		7829140722CF3C35005A49C6 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		7829140922CF43F8005A49C6 /* IndicatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IndicatorView.swift; sourceTree = "<group>"; };
 		7829140D22CF445E005A49C6 /* UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
+		782C69DB22F158CC0061709A /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
 		789BBF3F22D981F700202D64 /* Study.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Study.swift; sourceTree = "<group>"; };
 		789BBF4122D984E900202D64 /* ChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartView.swift; sourceTree = "<group>"; };
 		78A6E44922D4B5F400B5F08A /* RankingCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RankingCell.xib; sourceTree = "<group>"; };
@@ -123,6 +125,7 @@
 		782913F622CF382D005A49C6 /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				782C69DA22F158470061709A /* ViewModel */,
 				78A6E46022D6BF9D00B5F08A /* Delegates */,
 				782913F722CF382D005A49C6 /* Core */,
 				782913F922CF382D005A49C6 /* Network */,
@@ -163,10 +166,10 @@
 		782913FF22CF382D005A49C6 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				78A6E45C22D5887700B5F08A /* MainVC.swift */,
-				7829140022CF382D005A49C6 /* ViewController.swift */,
-				78A6E45022D4BA3000B5F08A /* FriendRankingVC.swift */,
-				78A6E46722D6DF6400B5F08A /* WideRankingVC.swift */,
+				7878B78522DB43E0005D9910 /* Ranking */,
+				7878B78422DB43DA005D9910 /* Friend */,
+				7878B78322DB43D0005D9910 /* Main */,
+				7878B78222DB43C9005D9910 /* Welcome */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -187,6 +190,46 @@
 				78A6E45622D4C0CE00B5F08A /* Array.swift */,
 			);
 			path = Extension;
+			sourceTree = "<group>";
+		};
+		782C69DA22F158470061709A /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				782C69DB22F158CC0061709A /* MainViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		7878B78222DB43C9005D9910 /* Welcome */ = {
+			isa = PBXGroup;
+			children = (
+				7829140022CF382D005A49C6 /* WelcomeVC.swift */,
+			);
+			path = Welcome;
+			sourceTree = "<group>";
+		};
+		7878B78322DB43D0005D9910 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				78A6E45C22D5887700B5F08A /* MainVC.swift */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		7878B78422DB43DA005D9910 /* Friend */ = {
+			isa = PBXGroup;
+			children = (
+				78A6E45022D4BA3000B5F08A /* FriendRankingVC.swift */,
+			);
+			path = Friend;
+			sourceTree = "<group>";
+		};
+		7878B78522DB43E0005D9910 /* Ranking */ = {
+			isa = PBXGroup;
+			children = (
+				78A6E46722D6DF6400B5F08A /* WideRankingVC.swift */,
+			);
+			path = Ranking;
 			sourceTree = "<group>";
 		};
 		78A6E44722D4B5CE00B5F08A /* UI */ = {
@@ -337,6 +380,9 @@
 				"${BUILT_PRODUCTS_DIR}/FBSDKLoginKit/FBSDKLoginKit.framework",
 				"${BUILT_PRODUCTS_DIR}/FacebookCore/FacebookCore.framework",
 				"${BUILT_PRODUCTS_DIR}/Rasat/Rasat.framework",
+				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
+				"${BUILT_PRODUCTS_DIR}/RxRelay/RxRelay.framework",
+				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
 			);
@@ -350,6 +396,9 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKLoginKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FacebookCore.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Rasat.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxRelay.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
 			);
@@ -379,7 +428,8 @@
 				7829140A22CF43F8005A49C6 /* IndicatorView.swift in Sources */,
 				7829140822CF3C35005A49C6 /* User.swift in Sources */,
 				782913E322CF375A005A49C6 /* AppDelegate.swift in Sources */,
-				7829140622CF382D005A49C6 /* ViewController.swift in Sources */,
+				7829140622CF382D005A49C6 /* WelcomeVC.swift in Sources */,
+				782C69DC22F158CC0061709A /* MainViewModel.swift in Sources */,
 				78A6E45122D4BA3000B5F08A /* FriendRankingVC.swift in Sources */,
 				7829140422CF382D005A49C6 /* RankingAPI.swift in Sources */,
 				7829140E22CF445E005A49C6 /* UIColor.swift in Sources */,

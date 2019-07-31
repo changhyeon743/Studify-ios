@@ -12,7 +12,7 @@ import FBSDKLoginKit
 import SwiftyJSON
 
 class FacebookAPI {
-    func login(_ vc: ViewController, completion: @escaping (String,String,String)->Void) {
+    func login(_ vc: WelcomeVC, completion: @escaping (String,String,String)->Void) {
         let fbLogin : LoginManager = LoginManager()
         
         fbLogin.logIn(permissions: ["public_profile","email","user_friends"], from: vc) { (result, error) in

@@ -18,6 +18,8 @@ class RankingCell: UITableViewCell {
     
     @IBOutlet weak var statusView: CircleView!
     
+    @IBOutlet weak var timeLabelRightConstraint: NSLayoutConstraint!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
     }

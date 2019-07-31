@@ -20,9 +20,6 @@ class API {
     var study = StudyAPI()
     var facebook = FacebookAPI()
     
-    //static var date = DateAPI()
-    
-    
     var currentUser:User? = nil
     var currentFriends:[User] = []
     var currentFriendsIds: [String] {
@@ -31,7 +28,6 @@ class API {
         }
     }
     
-    //static var blackCoverView: BlackCover = BlackCover()
     let channel = Channel<Studying>()
 
     

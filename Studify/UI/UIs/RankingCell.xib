@@ -31,9 +31,9 @@
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="국어 | 02:39" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3zt-lM-AlI">
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="국어 | 02:39" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3zt-lM-AlI">
                         <rect key="frame" x="370.5" y="38" width="55.5" height="12"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                        <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="10"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
@@ -62,6 +62,7 @@
                 <outlet property="profileImageView" destination="Yrh-cG-pPj" id="1DC-Ch-Y12"/>
                 <outlet property="statusView" destination="eKh-XJ-cez" id="U0S-w1-ijl"/>
                 <outlet property="timeLabel" destination="3zt-lM-AlI" id="ZkU-kq-7Eq"/>
+                <outlet property="timeLabelRightConstraint" destination="3zR-op-7w0" id="r9W-7B-81U"/>
             </connections>
             <point key="canvasLocation" x="133.33333333333334" y="72.321428571428569"/>
         </tableViewCell>
